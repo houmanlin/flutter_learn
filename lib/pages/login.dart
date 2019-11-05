@@ -69,15 +69,11 @@ class _loginPage extends State<Login> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0)),
                   onPressed: () {
-                    print("UserName:$UserName -------------   Password:$Password");
+
                   },
                 ))
               ],
             ),
-
-
-            Text("Username：$UserName"),
-            Text("Password：$Password")
 
 
       ],

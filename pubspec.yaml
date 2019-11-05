@@ -25,10 +25,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   flutter_swiper : ^1.1.6
   dio: 3.0.0
-
-
-
-
+  shared_preferences: ^0.5.4+3
 dev_dependencies:
   flutter_test:
     sdk: flutter

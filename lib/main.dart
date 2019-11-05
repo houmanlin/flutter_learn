@@ -6,6 +6,9 @@ import 'pages/login.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  MyApp(){
+    print("代码真的更新了");
+  }
   bool islogin = true;
   // This widget is the root of your application.
   @override
