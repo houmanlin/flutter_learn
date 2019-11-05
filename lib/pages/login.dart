@@ -1,4 +1,9 @@
+
+import 'package:city_shop/comm/HttpUtil.dart';
+import 'package:city_shop/comm/Request_Uri.dart';
 import 'package:flutter/material.dart';
+
+
 
 class Login extends StatefulWidget {
   @override
@@ -68,9 +73,7 @@ class _loginPage extends State<Login> {
                   child: Text("登录"),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0)),
-                  onPressed: () {
-
-                  },
+                  onPressed: _loginBtn
                 ))
               ],
             ),
@@ -80,5 +83,25 @@ class _loginPage extends State<Login> {
         ),
       )),
     );
+  }
+
+  void _loginBtn() {
+
+      //用户输入的用户名以及密码
+      Map<String, String> data = {
+        "mobile": UserName,
+        "pwd": Password
+      };
+      HttpUtil.getInstance().post(
+          API_List["user_login"],
+          data,
+          (data) {
+
+          },
+          (error){
+//            print("——————————————————————————————result————————————————————————————————");
+//            print(error);
+          }
+      );
   }
 }
